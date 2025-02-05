@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ACTIVE: hsl(75, 94%, 57%);
+
+    --WHITE: hsl(0, 0%, 100%);
+
+    --LIGHTER: hsl(0, 0%, 20%);
+    --LIGHT: hsl(0, 0%, 12%);
+    --DEEP: hsl(0, 0%, 8%);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--DEEP);
+}
+
+main {
+    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(330px, 50vw, 350px);
+    background-color: var(--LIGHT);
+    border-radius: 12px;
+}
+
+img {
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.name {
+    color: var(--WHITE);
+    font-size: clamp(15px, 50vh, 25px);
+}
+
+.location {
+    color: var(--ACTIVE);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.description {
+    color: var(--WHITE);
+    font-size: 14px;
+    font-weight: 100;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 22px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 23px;
+    padding-bottom: 33px;
+}
+
+.link {
+    width: 80%;
+    padding: 10px;
+    background-color: var(--LIGHTER);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--WHITE);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.link:active, .link:hover  {
+    background-color: var(--ACTIVE);
+    color: var(--DEEP);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--WHITE);
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%);
+    }
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--WHITE);
+    }
+
+    .attribution {
+        color: var(--DEEP);
+    }
+
+}
